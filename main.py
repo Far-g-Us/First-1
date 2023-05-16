@@ -48,7 +48,7 @@ print("Заполните информацию")
 myName = input("Введите имя: ")
 myFamily = input("Введите фамилию: ")
 myAge = int(input("Введите ваш возраст: "))
-myCountry = input("Ваша страна: ")
+myCountry = input("Введите страну: ")
 
 print("Имя:", myName)
 print("Фамилия:", myFamily)
