@@ -1,2 +1,2 @@
 # First-1
-FullTrash
+Print, Delete, Repete
