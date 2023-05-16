@@ -25,33 +25,32 @@
 
 #--------------------------------------------------------------#
 
-print("Заполните информацию")
+# print("Заполните информацию")
 
-myName = input("Введите имя: ")
-print("Имя:", myName)
+# myName = input("Введите имя: ")
+# print("Имя:", myName)
 
-myFamily = input("Введите фамилию: ")
-print("Фамилия:", myFamily)
+# myFamily = input("Введите фамилию: ")
+# print("Фамилия:", myFamily)
 
-myAge = input("Введите ваш возраст: ")
-myAge = int(myAge)
-print("Возраст:", myAge)
+# myAge = input("Введите ваш возраст: ")
+# myAge = int(myAge)
+# print("Возраст:", myAge)
 
-myCountry = input("Ваша страна: ")
-print("Страна:", myCountry)
+# myCountry = input("Ваша страна: ")
+# print("Страна:", myCountry)
 
 
 #--------------------------------------------------------------#
 
-# print("Заполните информацию")
+print("Заполните информацию")
 
-# myName = input("Введите имя: ")
-# myFamily = input("Введите фамилию: ")
-# myAge = input("Введите ваш возраст: ")
-# myAge = int(myAge)
-# myCountry = input("Ваша страна: ")
+myName = input("Введите имя: ")
+myFamily = input("Введите фамилию: ")
+myAge = int(input("Введите ваш возраст: "))
+myCountry = input("Ваша страна: ")
 
-# print("Имя:", myName)
-# print("Фамилия:", myFamily)
-# print("Возраст:", myAge)
-# print("Страна:", myCountry)
+print("Имя:", myName)
+print("Фамилия:", myFamily)
+print("Возраст:", myAge)
+print("Страна:", myCountry)
