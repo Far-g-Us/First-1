@@ -91,6 +91,12 @@
 # x4 = x%10
 # print(x4)
 
+# z =str(input("Введите 1 число: "))
+# x =str(input("Введите 2 число: "))
+# print(z + x)
+
 z =str(input("Введите 1 число: "))
 x =str(input("Введите 2 число: "))
-print(z + x)
+c = z + x 
+c = int(c)
+print(c)
