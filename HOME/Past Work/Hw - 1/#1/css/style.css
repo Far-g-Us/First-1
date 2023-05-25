@@ -1,0 +1,37 @@
+h2 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.border {
+    box-sizing: border-box;
+    width: calc(20% - 10px);
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 0px;
+    margin:  2px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+    overflow: auto;
+
+}
