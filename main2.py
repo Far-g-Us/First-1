@@ -146,10 +146,21 @@
 #     print(i)
 #     i+=1
 
-hhos = int(input("Введите число для расчёта факториала:\n"))
+#------------------------------------#
+
+n = int(input("Введите число для расчёта факториала:\n"))
 faktor = 1
-i = 1
-while i <= hhos:
-    faktor = hhos * i
-    i = i + 1
+while n > 1:
+    faktor *= n
+    n -= 1
 print(faktor)
+
+# hhos = int(input("Введите число для расчёта факториала:\n"))
+# faktor = 1
+# i = 1
+# while i <= hhos:
+#     faktor = faktor * i
+#     i = i + 1
+# print(faktor)
+
+#-----------------------------------------------------------------#
