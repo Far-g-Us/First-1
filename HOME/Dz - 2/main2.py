@@ -3,20 +3,20 @@ x = int(input("Введите число: "))
 y = int(input("Введите число: "))
 z = int(input("Введите число: "))
 m = [x,y,z]
-numbers = int(input("Выберите: 1 - максимум из трёх, 2 - минимум из трёх, 3 - среднеарифметическое из трёх "))
+numbers = int(input("Выберите: \n1 - максимум из трёх \n2 - минимум из трёх \n3 - среднеарифметическое из трёх"))
 if numbers == 1:
     b = max(m)
-    print(m)
+    print(b)
 elif numbers == 2:
     b = min(m)
     print(b)
 elif numbers == 3:
     if y < x < z or z < x < y:
-        print('Среднее:', x)
+        print(x)
     elif x < y < z or z < y < x:
-        print('Среднее:', y)
+        print(y)
     else:
-        print('Среднее:', z)
+        print(z)
 else:
     print("Вы не выбрали ни один из вариантов")
 
@@ -32,3 +32,5 @@ else:
 #     m = [x, y, z]
 #     b = min(m)
 #     print(b)
+#
+#g = (x+y+z)/3
