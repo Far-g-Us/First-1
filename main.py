@@ -192,16 +192,16 @@
 
 #-----------------------------------------------------------------------#
 
-num1 = int(input("Введите число "))
-num2 = int(input("Введите число "))
-war = int(input("Выберите: 1 - сложение, 2 - вычитание, 3 - деление, 4 - умножение 2"))
-if war == 1:
-    print(num1 + num2) 
-elif war == 2:
-    print(num1 - num2)
-elif war == 3:
-    print(num1 / num2)
-elif war == 4:
-    print(num1 * num2)
-else:
-    print("Вы не выбрали ни один из вариантов")
+# num1 = int(input("Введите число "))
+# num2 = int(input("Введите число "))
+# war = int(input("Выберите: 1 - сложение, 2 - вычитание, 3 - деление, 4 - умножение 2"))
+# if war == 1:
+#     print(num1 + num2) 
+# elif war == 2:
+#     print(num1 - num2)
+# elif war == 3:
+#     print(num1 / num2)
+# elif war == 4:
+#     print(num1 * num2)
+# else:
+#     print("Вы не выбрали ни один из вариантов")
