@@ -27,7 +27,7 @@ reg = 0
 while reg < 1:
     reg_gender = 0
     while reg_gender < 1:
-        gender = input("Выберите пол персонажа:\n 1-муж\n 2-жен\n: ")
+        gender = input("Выберите пол персонажа:\n 1-Муж\n 2-Жен\n: ")
         if gender == "1":
             gender = "Мужской"
             reg_gender+=1
@@ -39,7 +39,7 @@ while reg < 1:
         if reg_gender == 1:
             reg_race = 0
             while reg_race < 1:
-                race = input("Выберите расу персонажа:\n 1 - человек\n 2 - эльфы\n 0 - Назад\n: ")
+                race = input("Выберите расу персонажа:\n 1 - Человек\n 2 - Эльфы\n 0 - Назад\n: ")
                 if race == "1":
                     race = "Человек"
                     reg_race+=1
@@ -54,7 +54,7 @@ while reg < 1:
                 if reg_race == 1:
                     reg_role = 0
                     while reg_role < 1:
-                        role = input("Выберите расу персонажа:\n 1 - маг\n 2 - воин\n 0 - Назад\n start - В начало\n: ")
+                        role = input("Выберите расу персонажа:\n 1 - Маг\n 2 - Воин\n 0 - Назад\n start - В начало\n: ")
                         if role == "1":
                             role = "Маг"
                             reg_role+=1
