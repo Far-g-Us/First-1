@@ -54,7 +54,7 @@ while reg < 1:
                 if reg_race == 1:
                     reg_role = 0
                     while reg_role < 1:
-                        role = input("Выберите расу персонажа:\n 0<-Назад\n 1-маг\n 2-воин\n: ")
+                        role = input("Выберите расу персонажа:\n 0<-Назад\n 4<-В начало\n 1-маг\n 2-воин\n: ")
                         if role == "1":
                             role = "Маг"
                             reg_role+=1
@@ -63,6 +63,9 @@ while reg < 1:
                             reg_role+=1
                         elif role == "0":
                             reg_race = 0
+                            break
+                        elif role == "4":
+                            reg_gender = 0
                             break
                 else:
                     print("Выберите из перечисленного")
