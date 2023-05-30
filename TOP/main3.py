@@ -70,4 +70,4 @@ while reg < 1:
                 else:
                     print("Выберите из перечисленного")
     print(f"ваш пол - {gender}, ваша раса - {race}, ваш класс - {role}")
-    reg+= 1
+    reg+=1
