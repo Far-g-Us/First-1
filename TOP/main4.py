@@ -145,8 +145,3 @@ while guest < 1:
                 print(guestList)
     reg_guest = 1
         
-            
-        
-
-
-
