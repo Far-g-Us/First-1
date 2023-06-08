@@ -132,16 +132,4 @@
 #         print(f"Компот готов и осталось {(sasha + masha)- 8} яблок")
 
 
-guestList = []
-guest = 0
-while guest < 1:
-    reg_guest = 0
-    while reg_guest < 1:
-        guestList.append(input("Укажите фамилию гостя для добавления в список: "))
-        if len(guestList) <= 10 or len(guestList) < 0:
-            guestList.append(input("Добавте гостя: "))
-            if len(guestList) >= 5:
-                guestList.remove(input(f"Укажите фамилию для удаления:\n{guestList} "))
-                print(guestList)
-    reg_guest = 1
-        
+
