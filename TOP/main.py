@@ -1,207 +1,114 @@
-# type_int = 1 #целые числа
-# type_float = 1,23 #числа с точкой
-# type_str = "Строки пишутся в кавычках" 
-# type_bool_one = True #булево значение правда, истина 
-# type_bool_two = False #булевы значение ложь
-# type_none = None
+# Делегирование + мышление ООП
 
-# a = 123
-# print(a *2, type(a))
-# a = str(a)
-# print(a *2, type(a))
-# a = float(a)
-# print(a *2, type(a))
+# двигатель и его функции
+# def start():
+#     print("Запуск")
 
-# b = "123"
-# print(b, type(b))
-# b = int(b)
-# print(b, type(b))
+# def stop():
+#     print("Стоп")
 
-# c = int(input("Введите число - мы умножим его на 2: ")) #input() по умолчанию является строкой
-# c = int(c) #из строки в число
-# print(c *2, type(c))
+# Engine = {
+#     "start" : start,
+#     "stop" : stop,
+# }
+# # Engine["start"]()
+# # Engine["stop"]()
 
+# def open():
+#     print("Капот открыт")
+# def close():
+#     print("Капот закрыт")
 
-#--------------------------------------------------------------#
+# Bonnet = {
+#     "open" : open,
+#     "close" : close,
+# }
 
+# # основа авто
+# Car = {
+#     "color" : "",
+#     "marka" : "",
+#     "engine" : "",
+#     "bonnet" : "",
+# }
 
-# print("Заполните информацию")
+# auto = Car
 
-# myName = input("Введите имя: ")
-# print("Имя:", myName)
-
-# myFamily = input("Введите фамилию: ")
-# print("Фамилия:", myFamily)
-
-# myAge = input("Введите ваш возраст: ")
-# myAge = int(myAge)
-# print("Возраст:", myAge)
-
-# myCountry = input("Ваша страна: ")
-# print("Страна:", myCountry)
-
-
-#--------------------------------------------------------------#
+# auto["marka"] = "audi"
+# auto["color"] = "green"
+# auto["engine"] = Engine
+# # print(auto)
+# auto["engine"]["start"]()
 
 
-# print("Заполните информацию")
+# основная функция
+# def Car(marka,color,engine):
+#     thisMarka = marka
+#     thisColor = color
+#     # thisEngine = engine
 
-# myName = input("Введите имя: ")
-# myFamily = input("Введите фамилию: ")
-# myAge = int(input("Введите ваш возраст: "))
-# myCountry = input("Введите страну: ")
+#     activeList = {
+#         "showMarka" : showMarka,
+#     }
 
-# print("Имя:", myName)
-# print("Фамилия:", myFamily)
-# print("Возраст:", myAge)
-# print("Страна:", myCountry)
+#     def showMarka(param):
+#         print(param)
 
+# двигатель
 
-#----------------------------------------------------------------#
-
-
-# myName = "Ден"
-# print("Привет"+ " " + myName)
-# print(f"Привет {myName}")
-# print("Привет"," ","Ден")
-
-
-#-----------------------------------------------------------------#
-
-
-# z = int(input("Введите число: "))
-# b = z//10
-# c = z%10
-# print(b)
-# print(c)
-
-# z =int(input("Введите число: "))
-# x1 = z//100
-# x2 = (z//10)%10
-# x3 = z%10
-# print(x1)
-# print(x2)
-# print(x3)
-# c = x1+x2+x3
-# print(c)
-
-# x =int(input("Введите число: "))
-# x1 = x%10
-# print(x1)
-# x = 123
-# x2 = x%10
-# print(x2)
-# x = 12
-# x3 = x%10
-# print(x3)
-# x = 1
-# x4 = x%10
-# print(x4)
+# auto = Car("audi","green")
+import copy
+# создание персонажа
+def attack():
+    print("Включен режим атаки")
+def shot():
+    print("выстрел")
+Person = {
+    "name" : "Варвар",
+    "gender" : "Мужской",
+    # "actions" : {
+    #     "attack" : attack
+    # }
+}
 
 
-#-------------------------------------------------------------------#
+# создание расы на основе персонажа
+Human = copy.deepcopy(Person)
+Human["race"] = "Человек"
+Human["skills"] = "Быстрый бег", "Красноречие"
+
+Orc = copy.deepcopy(Person)
+Orc["race"] = "Орк"
+Orc["skills"] = "Выносливость", "Зог-зог"
 
 
-# z =str(input("Введите 1 число: "))
-# x =str(input("Введите 2 число: "))
-# print(z + x)
+# создание ролей на основе рас
+Warrior = copy.deepcopy(Human) or copy.deepcopy(Orc)
+Warrior["role"] = "Воин"
+Warrior["desk"] = "Воин - это..."
+# Warrior["actions"]["attack"]("удар")
+
+Archer = copy.deepcopy(Human) 
+Archer["role"] = "Лучник"
+Archer["desk"] = "Лучник - это..."
+# Archer["actions"]["attack"]("стрельба")
+
+Shaman = copy.deepcopy(Orc)
+Shaman["role"] = "Шаман"
+Shaman["desk"] = "Шаман - это..."
+# Shaman["actions"]["attack"]("заклинание")
 
 
-
-# z =str(input("Введите 1 число: "))
-# x =str(input("Введите 2 число: "))
-# c = z + x 
-# c = int(c)
-# print(c)
-
-
-#-------------------------------------------------------------------#
-
-
-# a = 5
-# b = 10
-# print(a>b)
-# print(a<b)
-#   true    false
-# if a < b or b > 10: 
-#     print("if выполнился")
-# elif a > b: #else if(сокращённо)
-#     print("elif выполнился")
-# else: #Всегда должен быть в коде
-#     print("else выполнился")
-
-
-#----------------------------------------#
-
-
-# login = "admin"
-# password = "admin"
-# if login == "admin":
-#     if password == "admin":
-#         print("Добро пожаловать")
-#     else:
-#         print("Пароль или логин не верный: этап 2")
-# else:
-#     print("Не верный логин или пароль: этап 1")
-
-
-#----------------------------------------#
-
-#5 вопросов, если набирает 3 очка, спросить хочет ли он ответить на доп овпрос.
-#Если ответит да или yes, то задаём иначе завершаем игру и выдаём ему кол-во очков.
-# q1 = input("Зимой и летом одним цветом?")
-# score = 0
-# if q1 == "ёлка" or q1 == "елка":
-#     print("Ответ верный")
-#     score = score + 1
-# else:
-#     print("Ответ не верный")
-# q2 = input("Столица России?")
-# if q2 == "Москва" or q2 == "москва":
-#     print("Ответ верный")
-#     score = score + 1
-# else:
-#     print("Ответ не верный")
-# q3 = input("Какое животное является логотипом Linux?")
-# if q3 == "Пингвин" or q3 == "пингвин":
-#     print("Ответ верный")
-#     score = score + 1
-# else:
-#     print("Ответ не верный")
-# print(f"Вы набрали {score} баллов")
-# if score >= 3:
-#     ask = input(f"Хотите ответить на доп вопросы?")
-#     if ask == "yes" or ask == "да":
-#         q4 = input("Какое животное является Linux?")
-#         if q4 == "Пингвин" or q4 == "пингвин":
-#             print("Ответ верный")
-#         else:
-#             print("Ответ не верный")
-#             q5 = input("Какое животное логотипом Linux?")
-#         if q5 == "Пингвин" or q5 == "пингвин":
-#             print("Ответ верный")
-#         else:
-#             print("Ответ не верный")
-#             q6 = input("Какое является логотипом Linux?")
-#         if q6 == "Пингвин" or q6 == "пингвин":
-#             print("Ответ верный")
-#         else:
-#             print("Ответ не верный")
-#     else:
-#         print("Досвидания")
-
-#-----------------------------------------------------------------------#
-
-# num1 = int(input("Введите число "))
-# num2 = int(input("Введите число "))
-# war = int(input("Выберите: 1 - сложение, 2 - вычитание, 3 - деление, 4 - умножение 2"))
-# if war == 1:
-#     print(num1 + num2) 
-# elif war == 2:
-#     print(num1 - num2)
-# elif war == 3:
-#     print(num1 / num2)
-# elif war == 4:
-#     print(num1 * num2)
-# else:
-#     print("Вы не выбрали ни один из вариантов")
+print("-------------------------------------------------------")
+print(Person)
+print("-------------------------------------------------------")
+print(Human)
+print("-------------------------------------------------------")
+print(Orc)
+print("-------------------------------------------------------")
+print(Warrior)
+print("-------------------------------------------------------")
+print(Archer)
+print("-------------------------------------------------------")
+print(Shaman)
+print("-------------------------------------------------------")
