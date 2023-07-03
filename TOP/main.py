@@ -162,6 +162,7 @@ class Wheel:
 class Headlights:
     def __init__(self,optics):
         self.optics = optics
+        
     def on(self):
         print("Вкл фар")
 
@@ -186,53 +187,53 @@ class Abs:
 
 # наследование
 
-class SportCar(Car):
-    def __init__(self, color, marka, motor, wheel, headlights, abs):
-        # self.color = color
-        # self.marka = marka
-        # self.engine = motor
-        # self.wheel = wheel
-        # self.headlights = headlights
-        self.abs = abs
-        super().__init__(color, marka, motor, wheel, headlights)
+# class SportCar(Car):
+#     def __init__(self, color, marka, motor, wheel, headlights, abs):
+#         # self.color = color
+#         # self.marka = marka
+#         # self.engine = motor
+#         # self.wheel = wheel
+#         # self.headlights = headlights
+#         self.abs = abs
+#         super().__init__(color, marka, motor, wheel, headlights)
 
-class SportEngine(Engine):
-    def __init__(self, HP, volume,turbo):
-        self.turbo = turbo
-        super().__init__(HP, volume)
+# class SportEngine(Engine):
+#     def __init__(self, HP, volume,turbo):
+#         self.turbo = turbo
+#         super().__init__(HP, volume)
 
-myHeadlights = Headlights("Halogen")
-myWheel = Wheel("1820","19")
-myAbs = Abs("Yes")
-porsheEngine = SportEngine("540","6.0",2)
-twoAuto = SportCar("blue","porshe",porsheEngine,myWheel,myHeadlights,myAbs)
-
-
+# myHeadlights = Headlights("Halogen")
+# myWheel = Wheel("1820","19")
+# myAbs = Abs("Yes")
+# porsheEngine = SportEngine("540","6.0",2)
+# twoAuto = SportCar("blue","porshe",porsheEngine,myWheel,myHeadlights,myAbs)
 
 
 
 
-class Animal:
-    def __init__(self,name,sound):
-        self.name = name
-        self.sound = sound
+
+
+# class Animal:
+#     def __init__(self,name,sound):
+#         self.name = name
+#         self.sound = sound
     
-    def activeSound(self):
-        print(self.sound)
+#     def activeSound(self):
+#         print(self.sound)
 
-class Cat(Animal):
-    def __init__(self, name):
-        super().__init__(name, "Мяу")
+# class Cat(Animal):
+#     def __init__(self, name):
+#         super().__init__(name, "Мяу")
 
-    def porr(self):
-        print("Мурлыкает")
+#     def porr(self):
+#         print("Мурлыкает")
 
-class Dog(Animal):
-    def __init__(self, name):
-        super().__init__(name, "Гав")
+# class Dog(Animal):
+#     def __init__(self, name):
+#         super().__init__(name, "Гав")
 
-    def digHole(self):
-        print("Копает яму")
+#     def digHole(self):
+#         print("Копает яму")
 
-myCat = Cat("Вася")
-myCat.porr()
+# myCat = Cat("Вася")
+# myCat.porr()
