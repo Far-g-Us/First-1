@@ -122,62 +122,62 @@
 
 
 
-class Car:
-    def __init__(self,color,marka,motor,wheel,headlights): # создание переменных для класса (объект)
-        self.color = color
-        self.marka = marka
-        self.engine = motor
-        self.wheel = wheel
-        self.headlights = headlights
+# class Car:
+#     def __init__(self,color,marka,motor,wheel,headlights): # создание переменных для класса (объект)
+#         self.color = color
+#         self.marka = marka
+#         self.engine = motor
+#         self.wheel = wheel
+#         self.headlights = headlights
 
-    # методы действия с определёнными классами
-    def showColor(self):
-        print(self.color)
+#     # методы действия с определёнными классами
+#     def showColor(self):
+#         print(self.color)
 
-    def showMarka(self):
-        print(self.marka)
+#     def showMarka(self):
+#         print(self.marka)
     
-class Engine:
-    def __init__(self,HP,volume):
-        self.HP = HP
-        self.volume = volume
+# class Engine:
+#     def __init__(self,HP,volume):
+#         self.HP = HP
+#         self.volume = volume
 
-    def start(self):
-        print("Запуск")
+#     def start(self):
+#         print("Запуск")
 
-    def stop(self):
-        print("Стоп")    
+#     def stop(self):
+#         print("Стоп")    
 
-class Wheel:
-    def __init__(self,turningRadius,diameterWheel):
-        self.turningRadius = turningRadius
-        self.diameterWheel = diameterWheel
+# class Wheel:
+#     def __init__(self,turningRadius,diameterWheel):
+#         self.turningRadius = turningRadius
+#         self.diameterWheel = diameterWheel
 
-    def turnLeft(self):
-        print("Поворот влево")
+#     def turnLeft(self):
+#         print("Поворот влево")
 
-    def turnRight(self):
-        print("Поворот право")
+#     def turnRight(self):
+#         print("Поворот право")
 
-class Headlights:
-    def __init__(self,optics):
-        self.optics = optics
+# class Headlights:
+#     def __init__(self,optics):
+#         self.optics = optics
         
-    def on(self):
-        print("Вкл фар")
+#     def on(self):
+#         print("Вкл фар")
 
-    def off(self):
-        print("Выкл фар")
+#     def off(self):
+#         print("Выкл фар")
 
-myHeadlights = Headlights("LED")
-myWheel = Wheel("1960","18")
-myEngine = Engine("120","2.0")
-twoEngine = Engine("280","2.2")
-myAuto = Car("green","audi",twoEngine,myWheel,myHeadlights)
+# myHeadlights = Headlights("LED")
+# myWheel = Wheel("1960","18")
+# myEngine = Engine("120","2.0")
+# twoEngine = Engine("280","2.2")
+# myAuto = Car("green","audi",twoEngine,myWheel,myHeadlights)
 
-class Abs:
-    def __init__(self,availability):
-        self.availability = availability
+# class Abs:
+#     def __init__(self,availability):
+#         self.availability = availability
 
 # print(myAuto.engine.HP)
 
@@ -211,9 +211,10 @@ class Abs:
 
 
 
+from abc import ABC,abstractmethod
 
-
-# class Animal:
+# class Animal(ABC):
+#     @abstractmethod
 #     def __init__(self,name,sound):
 #         self.name = name
 #         self.sound = sound
@@ -235,5 +236,86 @@ class Abs:
 #     def digHole(self):
 #         print("Копает яму")
 
+# class Donkey(Animal):
+#     def __init__(self, name, sound):
+#         super().__init__(name, "иа-иа")
+
 # myCat = Cat("Вася")
 # myCat.porr()
+
+# myDonkey = Animal("Вася")
+# myDonkey.activeSound()
+
+# class human(ABC):
+#     @abstractmethod
+#     def __init__(self,name,nationality):
+#         self.name = name
+#         self.nationality = nationality
+
+# class Man(human):
+#     def __init__(self, name, nationality):
+#         self.gender = "Мужской"
+#         super().__init__(name, nationality)
+
+# class Woman(human):
+#     def __init__(self, name, nationality):
+#         self.gender = "Женский"
+#         super().__init__(name, nationality)
+
+# man = Man("Alex","China")    
+# women = Woman("Vera","Italia")
+
+# class Grandfather(ABC):
+#     def __init__(self,name,haircolor):
+#         self.name = name
+#         self.haircolor = haircolor
+    
+#     def cookingBorsh(self):
+#         print("Варим борщ")
+    
+#     def repeirCar(self):
+#         print("Ремонтирует автомобиль")
+
+# class Father(Grandfather):
+#     def __init__(self,name,haircolor):
+#         super().__init__(name,haircolor)
+
+# Michail = Father("Михаил","Русый")
+# Michail.cookingBorsh()
+
+class Bird():
+    def __init__(self,name,sound):
+        self.name = name
+        self.sound = sound
+
+    def eat(self):
+        print("Кушает")
+
+    def hunting(self):
+        print("Охотится")
+
+    def activeSound(self):
+        print(self.sound)
+
+class flyBird(Bird):
+    def __init__(self, name,sound):
+        super().__init__(name,sound)
+    
+    def fly(self):
+        print("Летает")
+
+class noFly(Bird):
+    def __init__(self, name):
+        super().__init__(name)
+    
+    def walk(self):
+        print("Ходит")
+
+class Crow(flyBird):
+    def __init__(self, name,):
+        super().__init__(name,"Кар")
+    
+    
+
+crow = Crow("Вася")
+crow.activeSound()
