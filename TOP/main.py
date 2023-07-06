@@ -211,7 +211,7 @@
 
 
 
-from abc import ABC,abstractmethod
+# from abc import ABC,abstractmethod
 
 # class Animal(ABC):
 #     @abstractmethod
@@ -283,39 +283,167 @@ from abc import ABC,abstractmethod
 # Michail = Father("Михаил","Русый")
 # Michail.cookingBorsh()
 
-class Bird():
-    def __init__(self,name,sound):
-        self.name = name
-        self.sound = sound
+# class Bird():
+#     def __init__(self,name,sound):
+#         self.name = name
+#         self.sound = sound
 
-    def eat(self):
-        print("Кушает")
+#     def eat(self):
+#         print("Кушает")
 
-    def hunting(self):
-        print("Охотится")
+#     def hunting(self):
+#         print("Охотится")
 
-    def activeSound(self):
-        print(self.sound)
+#     def activeSound(self):
+#         print(self.sound)
 
-class flyBird(Bird):
-    def __init__(self, name,sound):
-        super().__init__(name,sound)
+# class flyBird(Bird):
+#     def __init__(self, name,sound):
+#         super().__init__(name,sound)
     
-    def fly(self):
-        print("Летает")
+#     def fly(self):
+#         print("Летает")
 
-class noFly(Bird):
-    def __init__(self, name):
-        super().__init__(name)
+# class noFly(Bird):
+#     def __init__(self, name):
+#         super().__init__(name)
     
-    def walk(self):
-        print("Ходит")
+#     def walk(self):
+#         print("Ходит")
 
-class Crow(flyBird):
-    def __init__(self, name,):
-        super().__init__(name,"Кар")
+# class Crow(flyBird):
+#     def __init__(self, name,):
+#         super().__init__(name,"Кар")
     
     
 
-crow = Crow("Вася")
-crow.activeSound()
+# crow = Crow("Вася")
+# crow.activeSound()
+
+
+base_list = [
+    {
+        "first_name" : "Alex",
+        "last_name" : "Arrow",
+        "birthday" : "01.01.2001",
+        "gender" : "Мужской",
+        "login" : "Alex453",
+        "password" : "ALEX992"
+    },
+    {
+        "first_name" : "John",
+        "last_name" : "Smith",
+        "birthday" : "09.11.2002",
+        "gender" : "Мужской",
+        "login" : "JnF22",
+        "password" : "Rq2673"
+    },
+    {
+        "first_name" : "Mike",
+        "last_name" : "Fuzz",
+        "birthday" : "12.05.2011",
+        "gender" : "Мужской",
+        "login" : "Mjd1455",
+        "password" : "Aq1sdc"
+    },
+    {
+        "first_name" : "Kyle",
+        "last_name" : "Jonson",
+        "birthday" : "11.04.2000",
+        "gender" : "Мужской",
+        "login" : "Eqwe255b",
+        "password" : "LikeMe66Rh"
+    },
+    {
+        "first_name" : "Tony",
+        "last_name" : "O'broke",
+        "birthday" : "03.12.2011",
+        "gender" : "Мужской",
+        "login" : "HTrwe2",
+        "password" : "QE13swz"
+    },
+]
+registered_users = [
+
+]
+
+class User():
+    def __init__(self,user_id,first_name,last_name,birthday,gender,login,password):
+        self.user_id = user_id
+        self.first_name = first_name
+        self.last_name = last_name
+        self.birthday = birthday
+        self.gender = gender
+        self.login = login
+        self.password = password
+        #-------------------------------------------#
+        self.status = "user"
+        self.blocking = False
+    #Изменение информации пользователя
+    def update_first_name(self,new_first_name):
+        self.first_name = new_first_name
+    def update_last_name(self,new_last_name):
+        self.last_name = new_last_name
+    def update_birthday(self,new_birthday):
+        self.birthday = new_birthday
+    def update_gender(self,new_gender):
+        self.gender = new_gender
+    def update_password(self,new_password):
+        if self.password == input("Введите старый пароль: "):
+            self.password = new_password
+
+class Moderator(User):
+    def __init__(self, user_id, first_name, last_name, birthday, gender, login, password):
+        super().__init__(user_id, first_name, last_name, birthday, gender, login, password)
+        self.status = "moderator"
+
+    def blocking_user(self,users_list):
+        text_user_list = f" id | first_name | blocking | status \n"
+        for i in range(0,len(users_list)):
+            text_user_list == f"{i} - {users_list[i]['user_id']}{users_list[i]['first_name']} - {users_list[i]['blocking']} {users_list[i]['status']}\n"
+        print(text_user_list)
+        input_user_id = int(input("Введите id пользователя для блокировки: "))
+        for i in range(0,len(users_list)):
+            if self.status == "moderator":
+                if input_user_id == i and {users_list[i]['status']} != "moderator" and {users_list[i]['status']} != "":
+                    if users_list[i]['blocking'] == True:
+                        print("Пользователь уже заблокирован")
+                        break
+                    else:
+                        users_list[i]['blocking'] = True
+                        print("пользователь успешно заблокирован")
+                        break
+            elif self.status == "admin":
+                if input_user_id == i:
+                    if users_list[i]['blocking'] == True:
+                        print("Пользователь уже заблокирован")
+                        break
+                    else:
+                        users_list[i]['blocking'] = True
+                        print("пользователь успешно заблокирован")
+                        break
+
+class Admin(Moderator):
+    def __init__(self, user_id, first_name, last_name, birthday, gender, login, password):
+        super().__init__(user_id, first_name, last_name, birthday, gender, login, password)
+        self.status = "admin"
+
+    def delete_user_list(self,users_list):
+        users_list.clear()
+        print("База данных удалена")
+                            # massiv - массив данных
+    def create_user_list(self,massiv,users_list):
+        for i in range(0,len(massiv)):
+            users_list.append(User(user_id=i,
+                                first_name=massiv[i]["first_name"],
+                                last_name=massiv[i]["last_name"],
+                                birthday=massiv[i]["birthday"],
+                                gender=massiv[i]["gender"],
+                                login=massiv[i]["login"],
+                                password=massiv[i]["password"]))
+
+myAdmin = Admin(10,"admin","admin","01.01.1900","Мужской","admin","admin")
+myAdmin.create_user_list(base_list,registered_users)
+print(registered_users)
+    
+
