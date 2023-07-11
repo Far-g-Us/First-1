@@ -434,6 +434,7 @@ class Admin(Moderator):
                             # massiv - массив данных
     def create_user_list(self,massiv,users_list):
         for i in range(0,len(massiv)):
+            print(users_list)
             users_list.append(User(user_id=i,
                                 first_name=massiv[i]["first_name"],
                                 last_name=massiv[i]["last_name"],
@@ -442,8 +443,69 @@ class Admin(Moderator):
                                 login=massiv[i]["login"],
                                 password=massiv[i]["password"]))
 
-myAdmin = Admin(10,"admin","admin","01.01.1900","Мужской","admin","admin")
-myAdmin.create_user_list(base_list,registered_users)
-print(registered_users)
-    
 
+class Registration():
+    def __init__(self):
+        pass
+    def create_user(self):
+        registered_users.append(User(len(registered_users),
+                                input("Введите имя: "),
+                                input("Введите фамилию: "),
+                                input("Введите сколько вам лет: "),
+                                input("Введите ваш пол: "),
+                                input("Придумайте логин: "),
+                                input("Придумайте пароль: ")))
+
+class Inlog():
+    def __init__(self,login,password):
+        self.login = login
+        self.password = password
+    def log_in_account(self):
+        for i in range(len(registered_users)):
+            if registered_users[i].login == self.login and registered_users[i].password == self.password:
+                print("Вход выполнен")
+            elif i in range(registered_users):
+                print("Ошибка")
+
+class Manager():
+    def __init__(self,reg,inlog,user,moderator,admin,datalist):
+        self.reg = reg
+        self.inlog = inlog
+        self.user = user
+        self.moderator = moderator
+        self.admin = admin
+        self.datalist = datalist
+    def work(self):
+        print(self)
+
+
+my_reg = Registration
+my_inlog = Inlog
+my_person_list = [User,Moderator,Admin]
+my_base = []
+my_person_list[0](10,"admin","admin","01.01.1900","Мужской","admin","admin")
+# myManager = Manager(my_reg,my_inlog,my_person_list,my_base)
+
+
+
+# proverka = Registration()
+# proverka.create_user()
+
+
+# myAdmin = Admin(10,"admin","admin","01.01.1900","Мужской","admin","admin")
+# myAdmin.create_user_list(base_list,registered_users)
+# print(registered_users[0].update_first_name)
+# registered_users[0].update_first_name("Алекс")
+# registered_users[0].update_first_name(input("Введите новое имя: "))
+
+myLogin=Inlog(input("Введите логин: "), input("Введите пароль: "))
+myLogin.log_in_account()
+    
+primer = [
+    User(0,"name","last_name","01.01.2000","Мужской","user","user1"),
+    User(1,"name","last_name","01.01.2001","Мужской","user1","user11")
+]
+
+
+
+["747278"/"747234"/"747316"/"747226"/"744698"/"747154"]
