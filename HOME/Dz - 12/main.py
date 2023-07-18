@@ -78,9 +78,9 @@ class Moderator(User):
     def blocking_user(self, users_list):
         text_user_list = f"id | first_name | blocking | status \n"
         for i in range(0,len(users_list)):
-            text_user_list += f"{users_list[i].user_id}  {users_list[i].first_name}  {users_list[i].blocking} {users_list[i].status}\n"
+            text_user_list += f"{users_list[i].user_id} | {users_list[i].first_name} | {users_list[i].blocking} | {users_list[i].status}\n"
         print(text_user_list)
-        input_user_id = int(input("Введите id пользователя для блокировки"))
+        input_user_id = int(input("Введите id пользователя для блокировки "))
         for i in range(0,len(users_list)):
             if self.status == "moderator":
                 if input_user_id == i and users_list[i]['status'] != "moderator" and users_list[i]['status'] != "admin":
@@ -103,9 +103,9 @@ class Moderator(User):
     def unblocking_user(self,users_list):
         text_user_list = f"id | first_name | blocking | status \n"
         for i in range(0,len(users_list)):
-           text_user_list += f"{users_list[i].user_id}  {users_list[i].first_name}  {users_list[i].blocking} {users_list[i].status}\n"
+           text_user_list += f"{users_list[i].user_id} | {users_list[i].first_name} | {users_list[i].blocking} | {users_list[i].status}\n"
         print(text_user_list)
-        input_user_id = int(input("Введите id пользователя для разблокировки"))
+        input_user_id = int(input("Введите id пользователя для разблокировки "))
         for i in range(0,len(users_list)):
             if self.status == "moderator":
                 if input_user_id == i and users_list[i]['status'] != "moderator" and users_list[i]['status'] != "admin":
@@ -170,7 +170,7 @@ class InLog():
             if users_list[i].login == self.login and users_list[i].password == self.password:
                 print("вход выполнен")
                 break
-            elif i == len(registered_users):
+            elif i == len(users_list):
                 print("Ошибка")
 
 
@@ -201,17 +201,17 @@ myManager.inlog("admin","admin")
 # proverka = Registration()
 # proverka.create_user()
 
-# myAdmin = Admin(10,"admin","admin","01.01.1970","Мужской","admin","admin")
-# myAdmin.create_user_list(base_list,registered_users)
+myAdmin = Admin(10,"admin","admin","01.01.1970","Мужской","admin","admin")
+myAdmin.create_user_list(base_list,registered_users)
 
 # myLogin = InLog(input("Введите логин:"),input("введите пароль"))
 # myLogin.log_in_account()
 
 
 
-# print(len(registered_users))
-# myAdmin.blocking_user(registered_users)
-# print(registered_users)
+print(len(registered_users))
+myAdmin.unblocking_user(registered_users)
+print(registered_users)
 # print(registered_users[0].first_name)
 # registered_users[0].update_first_name("Denis")
 # print(registered_users[0].first_name)

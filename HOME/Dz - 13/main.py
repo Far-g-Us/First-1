@@ -11,7 +11,7 @@
 
 
 from abc import ABC,abstractmethod
-# В данном коде абстрактный метод не работает
+# В данном коде абстрактный метод не работает или по крайнем мере я не понимаю как его тут реализовать(код придётся переписать с нуля при реализации абстрактного метода)
 class Corpus(ABC):
     @abstractmethod
     def __init__(self,pu,motherboard,cpu,ram,gpu,externalMemory):
