@@ -1,4 +1,5 @@
-# class User - объект пользователя имеющий
+# class User - объект пользователя имеющий свои данные и свой функционал, может взаимодействовать только с самим собой, вводимые данные характерны для всех пользователей вне зависимости от статуса ("user","moderator","admin")
+# status и blocking - постоянные значения при создании класса, могут быть изменены только class Moderator и Admin
 
 class User():
     def __init__(self,user_id,first_name, last_name, birthday , gender, login, password) :
@@ -9,7 +10,7 @@ class User():
        self.gender = gender
        self.login = login
        self.password = password
-       #---------------------------------
+       #-----------------------
        self.status = "user"
        self.blocking = False
 
@@ -27,6 +28,7 @@ class User():
         if self.password == input("Введите старый пароль: "):
             self.password = new_password
 
+# class Moderator имеет свойства и методы как у class User, но имеет доп метод блокировки users и status moderator , blocking наследуется от User (false) 
 class Moderator(User):
     def __init__(self, user_id, first_name, last_name, birthday, gender, login, password):
         super().__init__(user_id, first_name, last_name, birthday, gender, login, password)
@@ -57,7 +59,7 @@ class Moderator(User):
                         users_list[i]['blocking'] = True
                         print("пользователь успешно заблокирован")
                         break
-
+# class Admin имеет свойства и методы как у class Modarator, но имеет доп метод удаление/создания всех users и status admin , blocking наследуется от Modarator (false)
 class Admin(Moderator):
     def __init__(self, user_id, first_name, last_name, birthday, gender, login, password):
         super().__init__(user_id, first_name, last_name, birthday, gender, login, password)
@@ -65,9 +67,8 @@ class Admin(Moderator):
     def delete_user_list(self, users_list):
         users_list.clear()
         print("База данных пуста")
-                                # massiv - массиом данных
+                                # massiv - массив данных
     def create_user_list(self, massiv, users_list):
-        print(len(users_list))
         for i in range(0,len(massiv)):
             users_list.append(User(user_id=i+1, 
                                 first_name=massiv[i]["first_name"],
