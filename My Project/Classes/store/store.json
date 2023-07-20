@@ -1,0 +1,42 @@
+[
+    {
+        "first_name": "Денис",
+        "last_name": "Кириллов",
+        "birthday": "01.06.2001",
+        "gender": "Мужской",
+        "login": "denis161",
+        "password": "12345"
+    },
+    {
+        "first_name": "Кирилл",
+        "last_name": "Кириллов",
+        "birthday": "17.08.2006",
+        "gender": "Мужской",
+        "login": "kirillooo",
+        "password": "12345"
+    },
+    {
+        "first_name": "Максим",
+        "last_name": "Максимов",
+        "birthday": "11.04.2000",
+        "gender": "Мужской",
+        "login": "maks07",
+        "password": "12345"
+    },
+    {
+        "first_name": "Руслан",
+        "last_name": "Русланов",
+        "birthday": "11.02.2000",
+        "gender": "Мужской",
+        "login": "russlan",
+        "password": "12345"
+    },
+    {
+        "first_name": "Екатерина",
+        "last_name": "Исаева",
+        "birthday": "25.10.2000",
+        "gender": "Женский",
+        "login": "ekaterina25e",
+        "password": "12345"
+    }
+]

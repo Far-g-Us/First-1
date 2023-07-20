@@ -8,3 +8,6 @@ class Registration():
         "login" : input(),
         "password" : input()
     },)
+
+def reg():
+    return
