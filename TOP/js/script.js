@@ -71,7 +71,7 @@ calcDiv.addEventListener("click", fDiv);
 
 let body = document.body;
 
-body.style.backgroundColor = "green";
+// body.style.backgroundColor = "green";
 
 
 
