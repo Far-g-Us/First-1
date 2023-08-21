@@ -1,15 +1,17 @@
-// num = +prompt("Введите пятизначное число для проверки:\n")
-// rev_num = 0
-// n = num
+let palindrom = 0;
 
-// while (n != 0) {
-//     rem = (n % 10)
-//     rev_num = (rev_num * 10 + rem)
-//     n = (n/10)
-// }
-
-// if (num == rev_num) {
-//     console.log("Палиндром")
-// } else {
-//     console.log("Не палиндром")
-// }
+do {
+    palindrom = Math.abs(
+        +prompt("Введите пятизначное число для проверки: ")
+    );
+} while (palindrom < 10000 || palindrom > 99999);
+let pal = [];
+for (i = 0; i < 5; i++) {
+    pal[i] = palindrom % 10;
+    palindrom = Math.trunc(palindrom / 10);
+};
+if (pal[0] == pal[4] && pal[1] == pal[3]) {
+    alert("Число палиндром");
+} else {
+    alert("Число не палиндром");
+};

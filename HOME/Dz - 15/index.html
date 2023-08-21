@@ -9,16 +9,22 @@
 </head>
 <body>
     <form>
-        <label for="a">Коэффициент а:</label>
-        <input type="number" id="a" name="a" required><br>
-        
-        <label for="b">Коэффициент b:</label>
-        <input type="number" id="b" name="b" required><br>
-
-        <label for="c">Коэффициент c</label>
-        <input type="number" id="c" name="c" required><br>
-
+        <input type="text" id="a" name="a" required>
+        <label for="b">x<sup>2</sup>+</label>
+        <input type="text" id="b" name="b" required>
+        <label for="c">x+</label>
+        <input type="text" id="c" name="c" required>
+        <span>= 0</span>
         <button type="button" onclick="solve()">Решить</button>
+        <div></div>
+    </form>
+    <form>
+        <label id="result_discriminant">D =</label>
+        <span name="result_discriminant" id="discriminant"></span><br>
+        <label id="result_x1">x<sub>1</sub>=</label>
+        <span name="result_x1" id="x1"></span><br>
+        <label id="result_x2">x<sub>2</sub>=</label>
+        <span name="result_x2" id="x2"></span><br>
     </form>
     <div id="result"></div>
 </body>
