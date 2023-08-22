@@ -16,8 +16,8 @@ function solve() {
         document.getElementById("x2").innerHTML = x2;
     } else if (discriminant === 0) {
         let x = -b / (2 * a);
-        document.getElementById("result").innerHTML = "Единственный корень уравнения: x = " + x;
+        document.getElementById("discriminant").innerHTML = "Единственный корень уравнения: x = " + x;
     } else {
-        document.getElementById("result").innerHTML = "Уравнение не имеет корней";
+        document.getElementById("discriminant").innerHTML = "Уравнение не имеет корней";
     }
 }
