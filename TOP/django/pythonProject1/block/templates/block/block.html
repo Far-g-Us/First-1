@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Блог</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'stile/stile.css' %}">
 </head>
 <body>
-<h1>Блог</h1>
+    <h1>Блог</h1>
+    <div style="border: 2px solid #000">
+        {% for article in articles %}
+            <h3><a href="{% url 'detail' article.id %}">{{ article.title }}</a></h3>
+            <img height="200px" src="{{ article.image.url }}" alt="">
+            <p>{{ article.desc }}</p>
+            <span>{{ article.date }}</span>
+        {% endfor %}
+    </div>
 </body>
 </html>
