@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная</title>
-    <link rel="stylesheet" href="{% static 'home/style/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'style/style.css' %}"/>
 </head>
 <body>
     <header class="header">
-        <div class="header-wrapper">
+        <div class="wrapper header-wrapper">
         <div class="logo">
             <img src="" alt="">
         </div>
         <nav>
-            <a href="#" class="link"></a>
-            <a href="#" class="link"></a>
-            <a href="#" class="link"></a>
+            <a href="#" class="link">Главная</a>
+            <a href="{% url 'block' %}" class="link">Блог</a>
+            <a href="#" class="link">Портфолио</a>
         </nav>
         <div class="header_right">
             <!--     Добавить код для проверки на авторизацию   -->
@@ -29,17 +29,23 @@
     <main>
         <!--     Добавить код для секции hero отображать её только после авторизации   -->
         <section class="hero">
-            <img src="" alt="" class="person-image">
-            <span class="first_name">Текст Рыба</span>
-            <span class="last_name">Текст Рыба</span>
-            <span class="my_age">99</span>
+            <div class="wrapper hero-wrapper">
+            <img src="" alt="" class="my_image hero__my_image">
+            <span class="first_name">Имя: Текст Рыба</span>
+            <span class="last_name">Фамилия: Текст Рыба</span>
+            <span class="my_age">Дата рождения: 01.01.2000(22)</span>
+            <p class="my_desc">О себе:</p>
+            <p class="my_desc">О себе:</p>
+            </div>
         </section>
         <!--     Добавить код для отображения регистрации, для не авторизованных пользователей   -->
     </main>
-    <section class="hero">
-        <h2>Регистрация нового пользователя</h2>
-        <a href="" class="sign_link">Регистрация</a>
-    </section>
+        <section class="hero">
+            <div class="wrapper hero-wrapper">
+            <h2>Регистрация нового пользователя</h2>
+            <a href="" class="sign_link">Регистрация</a>
+            </div>
+        </section>
 
 </body>
 </html>

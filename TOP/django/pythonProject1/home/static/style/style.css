@@ -57,3 +57,53 @@ nav > .link {
 .link.link-primary:hover {
     color: #fff;
 }
+
+.hero {
+    background-color: #fff;
+    height: calc(100vh - 80px);
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+}
+
+.hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.my_image {
+    width: 320px;
+    height: 320px;
+    border-radius: 100%;
+    background-color: #000;
+    object-fit: cover;
+}
+
+.first_name, .last_name, .my_desc {
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+}
+
+.my_desc {
+    font-weight: normal;
+    text-transform:lowercase;
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    margin: 5px 0 0;
+}
+
+.my_age {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #707070;
+}
+
+.hero__my_image {
+    margin-bottom: 20px;
+}
+
