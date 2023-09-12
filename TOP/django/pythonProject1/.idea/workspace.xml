@@ -37,6 +37,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Alex\PortableGit\First-1\TOP\django\pythonProject1\block\static\block" />
       <recent name="D:\Alex\PortableGit\First-1\TOP\django\pythonProject1\home\static" />
       <recent name="D:\Alex\PortableGit\First-1\TOP\django\pythonProject1\home\static\home" />
       <recent name="D:\Alex\PortableGit\First-1\TOP\django\pythonProject1\block\templates\static" />
@@ -94,10 +95,6 @@
           <url>file://$PROJECT_DIR$/mysite/manage.py</url>
           <line>2</line>
           <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/block/views.py</url>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
