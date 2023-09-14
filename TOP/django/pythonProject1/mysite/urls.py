@@ -18,11 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static  #импортирование из настроек статик
 from django.conf import settings
+import home.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),
-    path('block/', include('block.urls')),
+    path('', home.views.homeView, name='home'),
+    path('blog/', include('block.urls')),
     path('sign/', include('reguser.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

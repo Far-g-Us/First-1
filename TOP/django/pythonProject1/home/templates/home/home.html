@@ -1,31 +1,5 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Главная</title>
-    <link rel="stylesheet" href="{% static 'style/style.css' %}"/>
-</head>
-<body>
-    <header class="header">
-        <div class="wrapper header-wrapper">
-        <div class="logo">
-            <img src="" alt="">
-        </div>
-        <nav>
-            <a href="#" class="link">Главная</a>
-            <a href="{% url 'block' %}" class="link">Блог</a>
-            <a href="#" class="link">Портфолио</a>
-        </nav>
-        <div class="header_right">
-            <!--     Добавить код для проверки на авторизацию   -->
-            <a href="#" class="link">Регистрация</a>
-            <a href="#" class="link link-primary">Вход</a>
-            <!--     Добавить код на авторизацию   -->
-            <a href="#" class="link link-primary">Выход</a>
-        </div>
-        </div>
-    </header>
+{% extends 'base.html' %}
+{% block  content %}
     <main>
         <!--     Добавить код для секции hero отображать её только после авторизации   -->
         <section class="hero">
@@ -46,6 +20,4 @@
             <a href="" class="sign_link">Регистрация</a>
             </div>
         </section>
-
-</body>
-</html>
+{% endblock %}

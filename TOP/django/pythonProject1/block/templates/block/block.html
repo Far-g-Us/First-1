@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends 'base.html' %}
+{% block  content %}
     <title>Блог</title>
-    <link rel="stylesheet" href="{% static 'block/style/style.css' %}">
-</head>
-<body>
     <main>
         <div class="wrapper">
                 <h1 title="title title--h1">Блог</h1>
-                
-
             {% for article in articles %}
             <div class="card">
                 <div class="col-l">
@@ -26,5 +18,4 @@
             {% endfor %}
         </div> 
     </main>
-</body>
-</html>
+<{% endblock %}

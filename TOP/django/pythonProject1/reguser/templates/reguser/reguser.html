@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
 
-</body>
-</html>
+
+    <section>
+        <div class="wrapper">
+            <form action="{% url 'reguser' %}" method="POST">
+                {% csrf_token %}
+                {{ formuser }}
+                <button type="submit">Регистрация</button>
+                <p>{{ error }}</p>
+            </form>
+        </div>
+    </section>
+
+{% endblock %}

@@ -6,7 +6,7 @@ class Article(models.Model):
     desc = models.TextField('Описание')                                          # Строка с огранич знаками
     image = models.ImageField('Изображение', upload_to='block/image/')           # Строка под изображение
     date = models.DateField('Дата')                                              # Data
-    url = models.URLField('Доп. источник', blank=False)                          # Ссылка
+    url = models.URLField('Доп. источник', blank=True)                          # Ссылка
 
     def __str__(self):
         return f"{self.title} | {self.date}"
