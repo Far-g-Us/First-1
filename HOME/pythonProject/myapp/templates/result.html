@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат</title>
+</head>
+<body>
+        <p>Ссылка на ваше фото (из соц сети): {{ form.foto }} </p>
+        <p>Имя: {{ form.first_name }} </p>
+        <p>Фамилия: {{ form.last_name }} </p>
+        <p>Дата рождения:{{ form.date_of_birth }} </p>
+        <p>Умение 1: {{ form.skills_1 }} </p>
+        <p>Умение 2: {{ form.skills_2 }} </p>
+        <p>Умение 3: {{ form.skills_3 }} </p>
+        <p>Умение 4: {{ form.skills_4 }} </p>
+        <p>Умение 5: {{ form.skills_5 }} </p>
+        <p>О себе: {{ form.about_me }} </p>
+
+    <a href="{% url 'anketa' %}">Вернуться на главную</a>
+</body>
+</html>
