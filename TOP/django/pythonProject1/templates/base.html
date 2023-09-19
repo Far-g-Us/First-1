@@ -16,16 +16,16 @@
         <nav>
             <a href="{% url 'home' %}" class="link">Главная</a>
             <a href="{% url 'block' %}" class="link">Блог</a>
-            <a href="#" class="link">Профиль</a>
+            <a href="{% url 'profile' %}" class="link">Профиль</a>
         </nav>
         <div class="header_right">
             <!--     Добавить код для проверки на авторизацию   -->
             {% if request.user.username %}
             <!--     Добавить код на авторизацию   -->
-                <a href="#" class="link link-primary">Выход</a>
+                <a href="{% url 'logout' %}" class="link link-primary">Выход</a>
             {% else %}
                 <a href="{% url 'reguser' %}" class="link">Регистрация</a>
-                <a href="#" class="link link-primary">Вход</a>
+                <a href="{% url 'login' %}" class="link link-primary">Вход</a>
             {% endif %}
         </div>
     </div>
