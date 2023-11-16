@@ -400,3 +400,4 @@ FodyWeavers.xsd
 .idea
 .o
 .env
+.venv

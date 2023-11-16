@@ -5,17 +5,23 @@
     <title>Результат</title>
 </head>
 <body>
-        <p>Ссылка на ваше фото (из соц сети): {{ form.foto }} </p>
-        <p>Имя: {{ form.first_name }} </p>
-        <p>Фамилия: {{ form.last_name }} </p>
-        <p>Дата рождения:{{ form.date_of_birth }} </p>
-        <p>Умение 1: {{ form.skills_1 }} </p>
-        <p>Умение 2: {{ form.skills_2 }} </p>
-        <p>Умение 3: {{ form.skills_3 }} </p>
-        <p>Умение 4: {{ form.skills_4 }} </p>
-        <p>Умение 5: {{ form.skills_5 }} </p>
-        <p>О себе: {{ form.about_me }} </p>
+<h1>Результат:</h1>
 
-    <a href="{% url 'anketa' %}">Вернуться на главную</a>
+<p><strong>Фото:</strong><img src="{{ form_data.foto.url }}" alt="Фото"></p>
+
+<p><strong>Имя:</strong> {{ form_data.first_name }}</p>
+<p><strong>Фамилия:</strong> {{ form_data.last_name }}</p>
+<p><strong>День рождения:</strong> {{ form_data.birth_day }}</p>
+<p><strong>Навыки:</strong></p>
+<ul>
+<li>{{ form_data.skill_1 }}</li>
+<li>{{ form_data.skill_2 }}</li>
+<li>{{ form_data.skill_3 }}</li>
+<li>{{ form_data.skill_4 }}</li>
+<li>{{ form_data.skill_5 }}</li>
+</ul>
+<p><strong>Обо мне:</strong> {{ form_data.about_me }}</p>
+
+<a href="{% url 'form_page' %}">Вернуться на главную</a>
 </body>
 </html>

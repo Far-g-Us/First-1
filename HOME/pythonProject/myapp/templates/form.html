@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />-->
+    <meta charset="UTF-8">
+    <title>Регистрация пользователя</title>
+</head>
+<body>
+<h2>Регистрация пользователя</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить</button>
+    </form>
+
+
+    <img src="{{ MEDIA_URL }} {{ form.image.value }}" alt="Изображение">
+
+</body>
+</html>
