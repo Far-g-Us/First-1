@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/mobile.css" rel="stylesheet">
+    <link href="css/desktop.css" rel="stylesheet" media="(min-width: 1140px)">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <title>Yanki</title>
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <nav class="nav nav__wrapper">
+                <button class="burger" id="burger"></button>
+                <ul class="nav-list" id="navList">
+                    <li class="nav__item"><a class="nav__item--link" href="http://">new</a></li>
+                    <li class="nav__item"><a class="nav__item--link" href="http://">каталог</a></li>
+                    <li class="nav__item"><a class="nav__item--link" href="http://">о нас</a></li>
+                </ul>
+                <a href="#" id="logo" class="logo">
+                    Yanki
+                </a>
+                <div class="lang-coin">
+                    <div class="select lang select--white">
+                        <div class="select__header">
+                            <span class="select__current">RU</span>
+                            <div class="select__icon">&#62;</div>
+                        </div>
+                        <div class="select__body">
+                            <div class="select__item">RU</div>
+                            <div class="select__item">EN</div>
+                        </div>
+                    </div>
+                    <div class="select coin select--white">
+                        <div class="select__header">
+                            <span class="select__current">RUb</span>
+                            <div class="select__icon">&#62;</div>
+                        </div>
+                        <div class="select__body">
+                            <div class="select__item">RUb</div>
+                            <div class="select__item">usd</div>
+                            <div class="select__item">eur</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="client">    
+                    <a href="#" class="client__item client__item--search"></a>
+                    <span class="client__item client__item--lk"></span>
+
+                    <form action="" id="lkForm" class="client__form">
+                        <input placeholder="Логин" id="lkLogin" type="text" class="client__form-item">
+                        <input placeholder="Пароль" id="lkPassword" type="text" class="client__form-item">
+                        <input type="submit" class="client__form-btn" value="Вход">
+                    </form>
+
+                    <a href="#" class="client__item client__item--like"></a>
+                    <a href="#" class="client__item client__item--basket"></a>
+                </div>
+            </nav>
+            <ul class="burger__menu" id="burgerMenu">
+                <li class="burger__item">
+                    <input type="text" placeholder="Введите ваш запрос" class="burger__search">
+                    <div class="coin">
+                        <div class="select burger__select select--grey">
+                            <div class="select__header">
+                                <span class="select__current">rub</span>
+                                <div class="select__icon">&#62;</div>
+                            </div>
+                            <div class="select__body">
+                                <div class="select__item">rub</div>
+                                <div class="select__item">usd</div>
+                                <div class="select__item">eur</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="burger__item">
+                    <a class="burger__item-link" href="http://">
+                        <img class="burger__item-icon" src="img/lk_orange.svg" alt=""> Личный кабинет
+                    </a>
+                </li>
+                <li class="burger__item">
+                    <a class="burger__item-link" href="http://">
+                         new
+                    </a>
+                </li>
+                <li class="burger__item">
+                    <a class="burger__item-link" href="http://">
+                        каталог
+                    </a>
+                </li>
+                <li class="burger__item">
+                    <a class="burger__item-link" href="http://">
+                         О нас
+                    </a>
+                </li>
+                <li class="burger__item">
+                    <a class="burger__item-link" href="http://">
+                         Оплата и ДОСТАВКА
+                    </a>
+                </li>
+                <li class="burger__item">
+                    <a class="burger__item-link" href="http://">
+                         Условия возврата
+                    </a>
+                </li>
+                <li class="burger__item">
+                    <a class="burger__item-link" href="http://">
+                         контакты
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="wrapper hero__wrapper">
+                <h1 class="title title-h1 title--big title--white hero__title">
+                    Новая коллекция
+                </h1>
+                <a href="#" class="link link--description hero__link">
+                    Смотерть новинки
+                </a>
+            </div>
+        </section>
+        <section class="category">
+            <div class="wrapper">
+                <h2 class="title title-h2 category__title title--black">Категории</h2>
+                <div class="swiper category-swiper">
+                    <div class="swiper-wrapper">
+                      <a href="#" class="swiper-slide card-link">
+                        <img class="card-link__img" src="img/kurtki.jpg" alt="">
+                        <h3 class="title title-h3 card-link__title title--white">Куртки</h3>
+                      </a>
+                      <a href="#" class="swiper-slide card-link">
+                        <img class="card-link__img" src="img/palto.jpg" alt="">
+                        <h3 class="title title-h3 card-link__title title--white">Пальто</h3>
+                      </a>
+                      <a href="#" class="swiper-slide card-link">
+                        <img class="card-link__img" src="img/shuba.jpg" alt="">
+                        <h3 class="title title-h3 card-link__title title--white">Шубы</h3>
+                      </a>
+                      <a href="#" class="swiper-slide card-link">
+                        <img class="card-link__img" src="img/parka.jpg" alt="">
+                        <h3 class="title title-h3 card-link__title title--white">Парки</h3>
+                      </a>
+                      <a href="#" class="swiper-slide card-link">
+                        <img class="card-link__img" src="img/parka.jpg" alt="">
+                        <h3 class="title title-h3 card-link__title title--white">Парки</h3>
+                      </a>
+                    </div>
+
+                    <div class="btn-next"></div>
+                    <div class="btn-prev"></div>
+                  </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <script src="js/main.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+</body>
+</html>
